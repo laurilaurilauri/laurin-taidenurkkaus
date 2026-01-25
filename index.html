@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurin kuvanurkkaus</title>
+    <style>
+        /* 1. THE FOUNDATION */
+        body {
+            margin: 0;
+            padding: 40px;
+            background-color: #ffffff;
+            font-family: 'Helvetica', sans-serif;
+            color: #000;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        /* 2. THE CREATIVE GRID */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 150px; /* Base height for rows */
+            grid-gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 3. IMAGE STYLING */
+        .art-item {
+            background-color: #f9f9f9; /* Placeholder color */
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .art-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .art-item:hover {
+            transform: scale(1.04);
+            cursor: crosshair;
+            filter: invert(1);
+        }
+
+        /* 4. VARYING THE SIZES (The "Creative Room") */
+        .large { grid-row: span 4; grid-column: span 2; }
+        .tall  { grid-row: span 4; }
+        .wide  { grid-column: span 2; }
+        .small { grid-row: span 2; grid-column: span 1; }
+
+        /* 5. TYPOGRAPHY IN BETWEEN */
+        .text-break {
+            grid-column: 1 / -1; /* Spans the whole width */
+            padding: 60px 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: left;
+            border-top: 2px solid #000;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lauri Prudant</h1>
+        <p>TESTI TESTI TESTI</p>
+    </header>
+
+    <div class="gallery">
+        <div class="art-item large"><img src="images/cordoba_ilmapallo.JPEG" alt="Cordoban ilmapallo"></div>
+        <div class="art-item large"><img src="images/eripintaiset_naamat.JPEG" alt="Eripintaiset naamat"></div>
+        <div class="art-item small"><img src="images/frankenstein.JPEG" alt="Frank"></div>
+        <div class="art-item small"><img src="images/frankenstein.JPEG" alt="Frank"></div> <div class="text-break">
+            Kaaosta, kohtaamisia ja kukkia
+        </div>
+
+        <div class="art-item large"><img src="images/palapeli.JPEG" alt="Palapeli"></div>
+        <div class="art-item large"><img src="images/kukat_vievät.JPEG" alt="Kukat vievät"></div>
+        <div class="art-item small"><img src="images/hahmo_ja_lintu.JPEG" alt="Hahmo ja lintu"></div> 
+        <div class="art-item small"><img src="images/hahmo_ja_lintu.JPEG" alt="Hahmo ja lintu"></div>
+    </div>
+
+</body>
+</html>
